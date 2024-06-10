@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <div class="name">Berke Çelikel</div>
+        <div class="box-container">
+            <div class="box about">
+                <div class="icon">ℹ️</div>
+                <div class="text">Hakkımda</div>
+            </div>
+            <div class="box social">
+                <div class="icon">📱</div>
+                <div class="text">Sosyal Medyalar</div>
+            </div>
+            <div class="box forum">
+                <div class="icon">💬</div>
+                <div class="text">Forum</div>
+            </div>
+            <div class="box projects">
+                <div class="icon">💻</div>
+                <div class="text">Projeler</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const aboutBox = document.querySelector(".box.about");
+            aboutBox.addEventListener("click", function() {
+                window.location.href = "about.html";
+            });
+    
+            const socialBox = document.querySelector(".box.social");
+            socialBox.addEventListener("click", function() {
+                window.location.href = "social.html";
+            });
+    
+            const forumBox = document.querySelector(".box.forum");
+            forumBox.addEventListener("click", function() {
+                window.location.href = "forum.html";
+            });
+    
+            const otherBox = document.querySelector(".box.other");
+            otherBox.addEventListener("click", function() {
+                window.location.href = "other.html";
+            });
+        });
+    </script>
+</body>
+</html>

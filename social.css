@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb); 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+header a.back-button {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 40px; /* Geri butonunu diğer butonlardan ayır */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Butonlar arasındaki aralığı artır */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.auth-button {
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.auth-button:hover {
+    background: #357ab8;
+}
+
+header nav {
+    margin-left: 0; /* Diğer butonları sola al */
+}
+
+header .auth-buttons {
+    margin-left: auto; /* Auth butonlarını sağa al */
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-box {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
+    background-color: #f3c06b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.social-icon {
+    width: 50px; /* İkonların boyutunu küçült */
+    height: 50px; /* İkonların boyutunu küçült */
+}
+
+.social-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.social-box:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form h2 {
+    margin-top: 0;
+    font-size: 20px; /* Başlık boyutunu büyüt */
+    color: #333; /* Başlık rengini değiştir */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Alanlar arası boşluğu artır */
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Yazı rengini değiştir */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px; /* Yazı alanlarını büyüt */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Köşeleri yumuşat */
+    font-size: 16px; /* Yazı boyutunu büyüt */
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Buton boyutunu büyüt */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    max-width: 400px;
+    font-size: 18px; /* Buton boyutunu büyüt */
+}
+
+button[type="submit"]:hover {
+    background: #357ab8;
+}
+
+.alert {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.popup {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+.popup.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+.popup.success {
+    background-color: #4CAF50;
+}
+
+.popup.error {
+    background-color: #f44336;
+}

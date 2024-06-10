@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol Ekranı</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <section class="container">
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+                <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration">
+                <h1 class="opacity">KAYIT OL</h1>
+                <form id="registerForm">
+                    <input type="text" id="username" placeholder="Kullanıcı Adı" class="opacity" required>
+                    <input type="text" id="name" placeholder="İsim" class="opacity" required>
+                    <input type="text" id="surname" placeholder="Soyisim" class="opacity" required>
+                    <input type="password" id="password" placeholder="Şifre" class="opacity" required>
+                    <input type="email" id="email" placeholder="Email" class="opacity" required>
+                    <button type="submit" id="btnKayit" class="opacity">KAYIT OL</button>
+                    <a href="login.html" class="opacity">GİRİŞ YAP</a>
+                </form>
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </section>
+    <div id="popupMessage" class="popup"></div>
+    <script src="script/register.js"></script>
+</body>
+</html>

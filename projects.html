@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diğer Bilgiler</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-button"><- Geri</a>
+        <nav>
+            <ul>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="social.html">Sosyal Medyalar</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="projects.html">Projeler</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="authButton" class="auth-button">Giriş Yap</button>
+        </div>
+    </header>
+    <main>
+        <section class="project">
+            <h2>Çelebi Seyahat Acentesi</h2>
+            <p>Kullanılan Diller: HTML, CSS, JavaScript, C#, ASP.NET</p>
+            <p>Proje Açıklaması: Çelebi Seyahat Acentesi'nin web sayfasıdır. Bu web sitesinde bilet rezervasyon edilebilir, bilet satın alınabilir, şirket hakkında bilgi edenebilir ve çalışanlar için bazı kolaylıklar sağlanılır.</p>
+            <a href="https://github.com/Berkecxl/Celebi-Seyahat-Acentesi">GitHub</a>
+        </section>
+        <section class="project">
+            <h2>Core Market</h2>
+            <p>Kullanılan Diller: HTML, CSS, JavaScript, C#, ASP.NET</p>
+            <p>Proje Açıklaması: Core Market'in web sayfasıdır. Bu web sitesinde Core Marketten alışveriş yapabilir ve şirket hakkında bilgi elde edebilirsiniz.</p>
+            <a href="https://github.com/Berkecxl/CoreMarket">GitHub</a>
+        </section>
+        <section class="project">
+            <h2>Blog</h2>
+            <p>Kullanılan Diller: HTML, CSS, JavaScript, Java, Springboot</p>
+            <p>Proje Açıklaması: Bulunduğumuz sayfa da projelerim arasındadır. Bu web sitesinde benim hakkımda bilgi edinebilir ve mesaj gönderebilirsiniz.</p>
+            <a href="https://github.com/Berkecxl/blog-api">GitHub</a>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const authButton = document.getElementById('authButton');
+            const token = sessionStorage.getItem('token'); // Token'ı sessionStorage'dan kontrol ediyoruz
+    
+            if (token) {
+                authButton.textContent = 'Çıkış Yap';
+                authButton.addEventListener('click', function() {
+                    sessionStorage.removeItem('token'); // Token'ı kaldır
+                    window.location.reload(); // Sayfayı yenile
+                });
+            } else {
+                authButton.addEventListener('click', function() {
+                    window.location.href = 'login.html'; // Giriş yap sayfasına yönlendir
+                });
+            }
+        });
+    </script>
+</body>
+</html>

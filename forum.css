@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Arka planın gradient rengi */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Yatay kaydırmayı engelle */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+header a.back-button {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 40px; /* Geri butonunu diğer butonlardan ayır */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Butonlar arasındaki aralığı artır */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.auth-button {
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.auth-button:hover {
+    background: #357ab8;
+}
+
+header nav {
+    margin-left: 0; /* Diğer butonları sola al */
+}
+
+header .auth-buttons {
+    margin-left: auto; /* Auth butonlarını sağa al */
+}
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forum-container {
+    width: 80%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.comments-header button {
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.comments-header button:hover {
+    background: #357ab8;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.comment .comment-header {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.comment .comment-body {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 50px;
+}
+
+.comment .comment-likes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment .comment-likes .like-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #e74c3c;
+    transition: color 0.3s;
+}
+
+.comment .comment-likes .like-icon:hover {
+    color: #c0392b;
+}
+
+.comment .comment-likes .likes-count {
+    font-size: 18px;
+    color: #666;
+}
+
+.comment .comment-username {
+    font-weight: bold;
+}
+
+.comment .comment-date {
+    margin-left: 10px;
+    color: #999;
+}
+
+#newCommentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#newCommentForm textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+#newCommentForm button {
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#newCommentForm button:hover {
+    background: #357ab8;
+}

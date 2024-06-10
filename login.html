@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Ekranı</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <section class="container">
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+                <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
+                <h1 class="opacity">Giriş Yap</h1>
+                <form id="loginForm">
+                    <input type="text" id="txtUsername" placeholder="Kullanıcı Adı" class="opacity">
+                    <input type="password" id="txtPassword" placeholder="Şifre" class="opacity">
+                    <div class="alert alert-danger" id="loginError" style="display: none;">
+                        Kullanıcı adı veya şifre hatalı.
+                    </div>
+                    <button type="button" id="btnGiris" class="opacity">GİRİŞ YAP</button>
+                    <a href="register.html" id="lnkKayitOl" class="opacity">KAYIT OL</a>
+                </form>
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </section>
+    <div id="popupMessage" class="popup"></div>
+    <script src="script/login.js"></script>
+</body>
+</html>

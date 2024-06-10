@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="forum.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-button"><- Geri</a>
+        <nav>
+            <ul>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="social.html">Sosyal Medyalar</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="projects.html">Projeler</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="authButton" class="auth-button">Giriş Yap</button>
+        </div>
+    </header>
+    <main>
+        <div class="forum-container">
+            <div class="comments-header">
+                <button id="newCommentButton">Yeni Yorum</button>
+            </div>
+            <div id="commentsList" class="comments-list">
+                <!-- Yorumlar burada gösterilecek -->
+            </div>
+            <div id="newCommentForm" style="display:none;">
+                <textarea id="commentText" placeholder="Yorumunuzu yazın..."></textarea>
+                <button id="submitCommentButton">Yorumu Gönder</button> 
+            </div>
+        </div>
+    </main>
+    <script src="script/forum.js"></script>
+    <script src="script/createComment.js"></script> 
+</body>
+</html>
