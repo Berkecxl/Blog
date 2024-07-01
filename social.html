@@ -18,6 +18,7 @@
             </ul>
         </nav>
         <div class="auth-buttons">
+            <li><a href="messages.html" class="messages-link">Mesajlar</a></li>
             <button id="authButton" class="auth-button">Giriş Yap</button>
         </div>
     </header>
@@ -111,6 +112,7 @@
                             </form>
                             <div id="alert" class="alert" style="display:none;">Lütfen formu eksiksiz doldurun ve onay kutusunu işaretleyin.</div>
                         </section>
+                        <div id="popupMessage" class="popup"></div>
                         <script>
                             document.addEventListener('DOMContentLoaded', function() {
                                 const authButton = document.getElementById('authButton');

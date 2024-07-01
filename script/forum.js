@@ -14,12 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Yorumları API'den Alma
     function getComments() {
         fetch('http://localhost:8080/v1/comment')
             .then(response => response.json())
             .then(comments => {
-                commentsList.innerHTML = ''; // Yorumları temizle
+                commentsList.innerHTML = ''; 
                 comments.forEach(comment => {
                     const commentElement = document.createElement('div');
                     commentElement.className = 'comment';
@@ -72,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => {
                 if (response.ok) {
                     console.log('Yorum beğenme başarılı');
-                    // Gerekirse beğeni sayısını güncelle
                 } else {
                     console.error('Yorum beğenme başarısız');
                 }
@@ -83,26 +81,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-
-    // Sayfa yüklendiğinde yorumları al
     getComments();
 
-    // Oturum Durumunu Kontrol Et
     checkSession();
 
-    // Oturum Durumunu Kontrol Etme Fonksiyonu
     function checkSession() {
         const token = sessionStorage.getItem('token');
         if (token) {
             authButton.textContent = 'Çıkış Yap';
             authButton.addEventListener('click', () => {
                 sessionStorage.removeItem('token');
-                window.location.href = 'login.html'; // Çıkış işlemi, giriş sayfasına yönlendirme
+                window.location.href = 'login.html'; 
             });
         } else {
             authButton.textContent = 'Giriş Yap';
             authButton.addEventListener('click', () => {
-                window.location.href = 'login.html'; // Giriş sayfasına yönlendirme
+                window.location.href = 'login.html'; 
             });
         }
     }

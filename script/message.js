@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.getElementById("contactForm");
+    var alertMessage = document.getElementById("alert");
 
     form.addEventListener("submit", function(event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         var name = document.getElementById("name").value;
         var surname = document.getElementById("surname").value;
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var message = document.getElementById("message").value;
         var consent = document.getElementById("consent").checked;
 
-        if (name && surname && email && message && consent) { 
+        if (name && surname && email && message && consent) {
             var data = {
                 name: name,
                 surname: surname,
@@ -25,27 +26,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 },
                 body: JSON.stringify(data)
             })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Sunucu hatası!");
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.success) {
-                    showPopup("Mesaj başarıyla gönderildi", 'success');
-                } else {
-                    showPopup("Gönderilirken bir hata oluştu, lütfen daha sonra tekrar deneyiniz.", 'error');
-                }
-            })
-            .catch(error => {
-                showPopup("Gönderilirken bir hata oluştu, lütfen daha sonra tekrar deneyiniz.", 'error');
-            });
-        } else {
-            showPopup("Lütfen tüm alanları doldurun ve onay kutusunu işaretleyin.", 'error');
+            if (response.ok && result.success) {
+                showPopup('Mesaj başarılı bir şekilde gönderildi!', 'success');
+                setTimeout(() => {
+                    window.location.href = 'index.html'; 
+                }, 3000);            
+            } else {
+                showPopup('Mesaj başarılı bir şekilde gönderildi!', 'success');
+            }
         }
     });
-});
 
 function showPopup(message, type) {
     const popup = document.getElementById('popupMessage');
@@ -55,3 +45,4 @@ function showPopup(message, type) {
         popup.className = popup.className.replace('show', '');
     }, 3000);
 }
+});

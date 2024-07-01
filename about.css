@@ -61,7 +61,7 @@ header a.back-button {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    margin-right: 40px; 
+    margin-right: 40px; /* Geri butonunu diğer butonlardan ayır */
 }
 
 header h1 {
@@ -74,7 +74,7 @@ header h1 {
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 20px; 
+    gap: 20px; /* Butonlar arasındaki aralığı artır */
     margin: 0;
     padding: 0;
 }
@@ -113,11 +113,11 @@ header nav ul li a:hover {
 }
 
 header nav {
-    margin-left: 0;
+    margin-left: 0; /* Diğer butonları sola al */
 }
 
 header .auth-buttons {
-    margin-left: auto; 
+    margin-left: auto; /* Auth butonlarını sağa al */
 }
 
 h1 {
